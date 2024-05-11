@@ -1,0 +1,109 @@
+.base-Menu-root {
+  border: 0.1rem solid var(--dr-delta);
+  padding: var(--dr-spacing-4) 0;
+  border-radius: 1em;
+  background-color: var(--dr-gamma);
+
+  .base-Menu-listbox {
+    padding: 0;
+
+    .base-MenuItem-root {
+      cursor: pointer;
+      padding: var(--dr-spacing-1) var(--dr-spacing-4);
+      transition: 300ms ease-in-out;
+
+      &:hover {
+        background: var(--dr-delta);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: auto !important;
+    max-width: var(--main-wrapper-max-width);
+    position: fixed !important;
+    overflow-y: hidden;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    transform: none !important;
+    translate: unset !important;
+    z-index: 17;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    animation: slideUp 400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+    background-color: var(--dr-gamma);
+
+    border-bottom: none;
+  }
+
+  @keyframes slideUp {
+    0% {
+      bottom: -100vh;
+    }
+
+    100% {
+      bottom: 0;
+    }
+  }
+}
+
+// trigger
+.base-MenuButton-root {
+  padding: var(--dr-spacing-2);
+  border-radius: 0.5rem;
+}
+
+.base-MenuButton-root.primary {
+  background-image: linear-gradient(-10deg, var(--dr-epsilon), var(--dr-zeta));
+}
+
+.base-MenuButton-root.secondary {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.base-MenuButton-root.default {
+  background: transparent;
+  padding: 0;
+}
+
+.base--active.primary,
+.base-MenuButton-root.primary:hover {
+  box-shadow: 0 0 5px #ffffff77, -5px 0 20px rgba(255, 0, 255, 0.7),
+    5px 0 20px rgba(0, 255, 255, 0.7);
+  scale: 0.95;
+}
+
+.base--active.secondary,
+.base-MenuButton-root.secondary:hover {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0.2rem var(--dr-color-alpha),
+    -0.2rem 0 1rem var(--dr-color-alpha), 0.2rem 0 1rem var(--dr-color-alpha);
+  scale: 0.95;
+  scale: 0.95;
+}
+
+.base--active.success,
+.base-MenuButton-root.success:hover {
+  box-shadow: 0 0 0.2rem var(--dr-color-alpha), -0.2rem 0 1rem var(--dr-success),
+    0.2rem 0 1rem var(--dr-success);
+  scale: 0.95;
+}
+
+.base--active.danger,
+.base-MenuButton-root.danger:hover {
+  box-shadow: 0 0 0.2rem var(--dr-danger), -0.2rem 0 1rem var(--dr-danger),
+    0.2rem 0 1rem var(--dr-danger);
+  scale: 0.95;
+}
+
+.base--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

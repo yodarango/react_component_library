@@ -1,0 +1,89 @@
+.shrood-nav-01kq {
+  background-size: 200% 100%;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 20rem;
+  transition: left 300ms ease;
+
+  &.closed {
+    left: -15rem;
+  }
+
+  .shrood-nav-01kq__container {
+    background-color: var(--dr-gamma);
+    width: calc(100% - 0.1rem);
+    height: 100%;
+
+    .shrood-nav-container-01kq__top {
+      height: 5.4rem;
+    }
+
+    .shrood-nav-container-01kq__items {
+      position: relative;
+      z-index: 1;
+
+      .shrood-nav-container-items-01kq__item {
+        width: 100%;
+        background-color: var(--dr-nu);
+        position: relative;
+        z-index: 1;
+
+        .shrood-nav-container-items-item-01kq__selector {
+          display: none;
+        }
+
+        &.active {
+          .shrood-nav-container-items-item-01kq__selector {
+            display: block;
+            background-size: 200% 100%;
+            width: calc(98%);
+            height: 5rem;
+            border-top-left-radius: var(--dr-border-radius-2);
+            border-bottom-left-radius: var(--dr-border-radius-2);
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            position: absolute;
+            left: 0.5rem;
+            z-index: 2;
+
+            div {
+              content: "";
+              position: absolute;
+              top: 0.1rem;
+              left: 0.1rem;
+              width: calc(100% + 1.25rem);
+              height: 4.8rem;
+              background-color: var(--dr-beta);
+              border-top-left-radius: var(--dr-border-radius-2);
+              border-bottom-left-radius: var(--dr-border-radius-2);
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes gradientAnimation {
+    0%,
+    100% {
+      background-position: 0% 0%; /* Start and end position of the gradient */
+    }
+    50% {
+      background-position: 100% 0%; /* Middle position of the gradient */
+    }
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 5px var(--dr-iota), 0 0 5px var(--dr-lambda);
+    }
+    50% {
+      box-shadow: 0 0 10px var(--dr-iota), 0 0 10px var(--dr-lambda); /* Adjust shadow color here */
+    }
+  }
+}

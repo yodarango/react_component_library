@@ -10,4 +10,6 @@ At the moment, any project using this library are cloning it and importing its c
 
 ## Dev
 
+Since the application installing this must have react installed, it makes sense to have it install the [@mui/base](https://mui.com/base-ui/) library as well. Thus, this library has no node packages of its own.
+
 Application of any kind of styles should happen within the app importing it. **DO NOT** add styles here. The most common way to apply the styles is by using my private CDN.
