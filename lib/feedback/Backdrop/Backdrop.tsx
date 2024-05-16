@@ -1,4 +1,3 @@
-import { ModalHeader } from "@components";
 import { cloneElement } from "react";
 import { If, Portal } from "@ds";
 
@@ -89,24 +88,5 @@ export const Backdrop = (props: TBackdropProps) => {
         </div>
       </If>
     </Portal>
-  );
-};
-
-type BackdropHeaderProps = {
-  onClose?: () => void;
-  className?: string;
-  icon?: string;
-  title: string;
-};
-export const BackdropHeader = (props: BackdropHeaderProps) => {
-  const { className, title, onClose, icon } = props;
-
-  return (
-    <ModalHeader
-      className={className}
-      onClose={onClose}
-      title={title}
-      icon={icon}
-    />
   );
 };

@@ -1,5 +1,4 @@
 import { Portal, PortalProps } from "@mui/base/Portal";
-import { Waves } from "@components";
 import { If } from "../../utils";
 import "./Modal.scss";
 
@@ -7,7 +6,6 @@ type TModal = {
   showCloseButton?: boolean;
   bodyMaxHeight?: string;
   onClose: () => void;
-  showWaves?: boolean;
   zIndex?: number;
   children: any;
   open: boolean;
@@ -18,7 +16,6 @@ export const Modal = (props: TModal) => {
   const {
     showCloseButton = true,
     bodyMaxHeight = "",
-    showWaves = true,
     zIndex = 10,
     children,
     onClose,
@@ -55,9 +52,6 @@ export const Modal = (props: TModal) => {
             </If>
             <h4 className='mb-2 text-center mb-6 px-4'>{title}</h4>
             <div className='shrood-modal-0elj-content__content'>{children}</div>
-            <If condition={showWaves}>
-              <Waves className='shrood-modal-0elj__waves' />
-            </If>
           </div>
           <div
             className='shrood-modal-0elj__backdrop'
