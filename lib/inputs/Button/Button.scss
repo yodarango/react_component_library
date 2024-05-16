@@ -48,14 +48,14 @@
 .base--active.secondary,
 .base-Button-root.secondary:hover {
   background: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 0.2rem var(--dr-color-alpha),
-    -0.2rem 0 1rem var(--dr-color-alpha), 0.2rem 0 1rem var(--dr-color-alpha);
+  box-shadow: 0 0 0.2rem var(--dr-color-alpha), -0.2rem 0 1rem var(--dr-alpha),
+    0.2rem 0 1rem var(--dr-color-alpha);
   scale: 0.95;
 }
 
 .base--active.success,
 .base-Button-root.success:hover {
-  box-shadow: 0 0 0.2rem var(--dr-color-alpha), -0.2rem 0 1rem var(--dr-success),
+  box-shadow: 0 0 0.2rem var(--dr-alpha), -0.2rem 0 1rem var(--dr-success),
     0.2rem 0 1rem var(--dr-success);
   scale: 0.95;
 }
